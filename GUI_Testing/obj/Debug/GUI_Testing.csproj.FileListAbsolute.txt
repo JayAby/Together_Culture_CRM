@@ -8,3 +8,5 @@ C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\o
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.csproj.CoreCompileInputs.cache
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.exe
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.pdb
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.Home.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MemberDocuments.resources

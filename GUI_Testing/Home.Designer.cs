@@ -1,6 +1,6 @@
 ﻿namespace GUI_Testing
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.profileContainer = new System.Windows.Forms.Panel();
+            this.btnDocuments = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnChats = new System.Windows.Forms.Button();
-            this.btnPosts = new System.Windows.Forms.Button();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
@@ -46,9 +49,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLibrary = new System.Windows.Forms.Button();
             this.connectionContainer = new System.Windows.Forms.Panel();
+            this.btnChats = new System.Windows.Forms.Button();
+            this.btnConnections = new System.Windows.Forms.Button();
+            this.btnPosts = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnConnections = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -56,11 +61,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.connectionsTimer = new System.Windows.Forms.Timer(this.components);
+            this.profileTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.profileContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,8 +93,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.splitContainer1.Panel1.Controls.Add(this.profileContainer);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
@@ -97,8 +104,85 @@
             this.splitContainer1.Panel2.Controls.Add(this.sidebar);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1345, 768);
-            this.splitContainer1.SplitterDistance = 155;
+            this.splitContainer1.SplitterDistance = 166;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // profileContainer
+            // 
+            this.profileContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.profileContainer.Controls.Add(this.btnDocuments);
+            this.profileContainer.Controls.Add(this.button4);
+            this.profileContainer.Controls.Add(this.button3);
+            this.profileContainer.Controls.Add(this.button1);
+            this.profileContainer.Controls.Add(this.btnProfile);
+            this.profileContainer.Location = new System.Drawing.Point(67, 3);
+            this.profileContainer.MaximumSize = new System.Drawing.Size(284, 158);
+            this.profileContainer.MinimumSize = new System.Drawing.Size(130, 158);
+            this.profileContainer.Name = "profileContainer";
+            this.profileContainer.Size = new System.Drawing.Size(284, 158);
+            this.profileContainer.TabIndex = 4;
+            // 
+            // btnDocuments
+            // 
+            this.btnDocuments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDocuments.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocuments.ForeColor = System.Drawing.Color.White;
+            this.btnDocuments.Location = new System.Drawing.Point(129, 122);
+            this.btnDocuments.Name = "btnDocuments";
+            this.btnDocuments.Size = new System.Drawing.Size(150, 32);
+            this.btnDocuments.TabIndex = 8;
+            this.btnDocuments.Text = "Documents";
+            this.btnDocuments.UseVisualStyleBackColor = false;
+            this.btnDocuments.Click += new System.EventHandler(this.btnDocuments_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(129, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 32);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Membership";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(129, 46);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 32);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Interests";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(129, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 32);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Personal Info";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackgroundImage = global::GUI_Testing.Properties.Resources.hacker;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.Location = new System.Drawing.Point(0, 8);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(123, 92);
+            this.btnProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.TabStop = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // label1
             // 
@@ -106,20 +190,9 @@
             this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(581, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 37);
+            this.label1.Size = new System.Drawing.Size(33, 37);
             this.label1.TabIndex = 3;
-            this.label1.Text = "CONNECTIONS";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::GUI_Testing.Properties.Resources.hacker;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(123, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.label1.Text = "..";
             // 
             // pictureBox1
             // 
@@ -131,36 +204,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnChats
-            // 
-            this.btnChats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChats.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChats.ForeColor = System.Drawing.Color.White;
-            this.btnChats.Image = global::GUI_Testing.Properties.Resources.chatting;
-            this.btnChats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChats.Location = new System.Drawing.Point(11, 95);
-            this.btnChats.Name = "btnChats";
-            this.btnChats.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnChats.Size = new System.Drawing.Size(208, 40);
-            this.btnChats.TabIndex = 8;
-            this.btnChats.Text = "Chats";
-            this.btnChats.UseVisualStyleBackColor = true;
-            // 
-            // btnPosts
-            // 
-            this.btnPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPosts.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPosts.ForeColor = System.Drawing.Color.White;
-            this.btnPosts.Image = global::GUI_Testing.Properties.Resources.post;
-            this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPosts.Location = new System.Drawing.Point(11, 49);
-            this.btnPosts.Name = "btnPosts";
-            this.btnPosts.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnPosts.Size = new System.Drawing.Size(208, 40);
-            this.btnPosts.TabIndex = 8;
-            this.btnPosts.Text = "Posts";
-            this.btnPosts.UseVisualStyleBackColor = true;
             // 
             // sidebar
             // 
@@ -297,6 +340,52 @@
             this.connectionContainer.Size = new System.Drawing.Size(222, 45);
             this.connectionContainer.TabIndex = 12;
             // 
+            // btnChats
+            // 
+            this.btnChats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChats.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChats.ForeColor = System.Drawing.Color.White;
+            this.btnChats.Image = global::GUI_Testing.Properties.Resources.chatting;
+            this.btnChats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChats.Location = new System.Drawing.Point(11, 95);
+            this.btnChats.Name = "btnChats";
+            this.btnChats.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnChats.Size = new System.Drawing.Size(208, 40);
+            this.btnChats.TabIndex = 8;
+            this.btnChats.Text = "Chats";
+            this.btnChats.UseVisualStyleBackColor = true;
+            // 
+            // btnConnections
+            // 
+            this.btnConnections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnections.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnections.ForeColor = System.Drawing.Color.White;
+            this.btnConnections.Image = global::GUI_Testing.Properties.Resources.connection;
+            this.btnConnections.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnections.Location = new System.Drawing.Point(11, 3);
+            this.btnConnections.Name = "btnConnections";
+            this.btnConnections.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnConnections.Size = new System.Drawing.Size(208, 40);
+            this.btnConnections.TabIndex = 8;
+            this.btnConnections.Text = "      Connections";
+            this.btnConnections.UseVisualStyleBackColor = true;
+            this.btnConnections.Click += new System.EventHandler(this.btnConnections_Click);
+            // 
+            // btnPosts
+            // 
+            this.btnPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosts.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPosts.ForeColor = System.Drawing.Color.White;
+            this.btnPosts.Image = global::GUI_Testing.Properties.Resources.post;
+            this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPosts.Location = new System.Drawing.Point(11, 49);
+            this.btnPosts.Name = "btnPosts";
+            this.btnPosts.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnPosts.Size = new System.Drawing.Size(208, 40);
+            this.btnPosts.TabIndex = 8;
+            this.btnPosts.Text = "Posts";
+            this.btnPosts.UseVisualStyleBackColor = true;
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -320,22 +409,6 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "      Digital Library";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnConnections
-            // 
-            this.btnConnections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnections.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnections.ForeColor = System.Drawing.Color.White;
-            this.btnConnections.Image = global::GUI_Testing.Properties.Resources.connection;
-            this.btnConnections.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnections.Location = new System.Drawing.Point(11, 3);
-            this.btnConnections.Name = "btnConnections";
-            this.btnConnections.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnConnections.Size = new System.Drawing.Size(208, 40);
-            this.btnConnections.TabIndex = 8;
-            this.btnConnections.Text = "      Connections";
-            this.btnConnections.UseVisualStyleBackColor = true;
-            this.btnConnections.Click += new System.EventHandler(this.btnConnections_Click);
             // 
             // panel7
             // 
@@ -402,21 +475,27 @@
             this.connectionsTimer.Interval = 3;
             this.connectionsTimer.Tick += new System.EventHandler(this.connectionsTimer_Tick);
             // 
-            // Form1
+            // profileTimer
+            // 
+            this.profileTimer.Interval = 10;
+            this.profileTimer.Tick += new System.EventHandler(this.profileTimer_Tick);
+            // 
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 753);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Home";
+            this.Text = "TogetherCulture - Home";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.profileContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -438,7 +517,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnProfile;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -463,6 +542,12 @@
         private System.Windows.Forms.Button btnPosts;
         private System.Windows.Forms.Button btnChats;
         private System.Windows.Forms.Timer connectionsTimer;
+        private System.Windows.Forms.Panel profileContainer;
+        private System.Windows.Forms.Button btnDocuments;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer profileTimer;
     }
 }
 

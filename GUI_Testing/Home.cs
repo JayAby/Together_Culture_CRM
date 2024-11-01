@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace GUI_Testing
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         bool sidebarExpand;
         bool connectionCollapse;
-        public Form1()
+        bool profileExpand;
+        public Home()
         {
             InitializeComponent();
         }
@@ -81,6 +82,42 @@ namespace GUI_Testing
             connectionsTimer.Start();
         }
 
+        private void profileTimer_Tick(object sender, EventArgs e)
+        {
+            if (profileExpand)
+            {
+                // If profile container is expanded, minimize it
+                profileContainer.Width -= 10;
+                if (profileContainer.Width <= profileContainer.MinimumSize.Width)
+                {
+                    profileContainer.Width = profileContainer.MinimumSize.Width; // Ensure it doesn't go below minimum size
+                    profileExpand = false;
+                    profileTimer.Stop();
+                }
+            }
+            else
+            {
+                // If profile container is minimized, maximize it
+                profileContainer.Width += 10;
+                if (profileContainer.Width >= profileContainer.MaximumSize.Width)
+                {
+                    profileContainer.Width = profileContainer.MaximumSize.Width; // Ensure it doesn't exceed maximum size
+                    profileExpand = true;
+                    profileTimer.Stop();
+                }
+            }
+        }
 
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            profileTimer.Start();
+        }
+
+        private void btnDocuments_Click(object sender, EventArgs e)
+        {
+            MemberDocuments md = new MemberDocuments();
+            md.Show();
+            Visible = false;
+        }
     }
 }

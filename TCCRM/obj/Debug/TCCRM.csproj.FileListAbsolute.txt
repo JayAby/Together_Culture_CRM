@@ -1,0 +1,13 @@
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\bin\Debug\TCCRM.exe.config
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\bin\Debug\TCCRM.exe
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\bin\Debug\TCCRM.pdb
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.csproj.AssemblyReference.cache
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.Properties.Resources.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.csproj.GenerateResource.cache
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.csproj.CoreCompileInputs.cache
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.exe
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.pdb
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MemberHome.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MainForm.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MemberDocument.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MemberKeyPolicies.resources

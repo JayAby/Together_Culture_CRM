@@ -15,24 +15,17 @@ namespace GUI_Testing
         bool profileExpand;
         bool sidebarExpand;
         bool projectExpand;
+        bool eventsCollapse;
+        bool connectionCollapse;
 
         public MemberDocuments()
         {
             InitializeComponent();
-            // Subscribe to the FormClosing event
-            this.FormClosing += MemberDocuments_FormClosing;
+
         }
 
         // This method is triggered when the MemberDocuments form is closing
-        private void MemberDocuments_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Show the main form when "Member Documents" form is closed
-            Home mainForm = Application.OpenForms.OfType<Home>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.Show();
-            }
-        }
+
 
         private void profileTimer_Tick(object sender, EventArgs e)
         {
@@ -132,6 +125,67 @@ namespace GUI_Testing
             MemberDocuments_KeyPolicies keyPolicies = new MemberDocuments_KeyPolicies();
             keyPolicies.Show();
             Visible = false;
+        }
+
+        private void eventsTimer_Tick(object sender, EventArgs e)
+        {
+
+            if (eventsCollapse)
+            {
+                // Collapse the container
+                eventsContainer.Height -= 10;
+                if (eventsContainer.Height <= eventsContainer.MinimumSize.Height)
+                {
+                    eventsContainer.Height = eventsContainer.MinimumSize.Height;
+                    eventsCollapse = false;
+                    eventsTimer.Stop();
+                }
+            }
+            else
+            {
+                eventsContainer.Height += 10;
+                if (eventsContainer.Height >= eventsContainer.MaximumSize.Height)
+                {
+                    eventsContainer.Height = eventsContainer.MaximumSize.Height;
+                    eventsCollapse = true;
+                    eventsTimer.Stop();
+                }
+            }
+        }
+
+        private void btnEvents_Click(object sender, EventArgs e)
+        {
+            eventsTimer.Start();
+        }
+
+        private void connectionsTimer_Tick(object sender, EventArgs e)
+        {
+            if (connectionCollapse)
+            {
+                // Collapse the container
+                connectionContainer.Height -= 10;
+                if (connectionContainer.Height <= connectionContainer.MinimumSize.Height)
+                {
+                    connectionContainer.Height = connectionContainer.MinimumSize.Height;
+                    connectionCollapse = false;
+                    connectionsTimer.Stop();
+                }
+            }
+            else
+            {
+                connectionContainer.Height += 10;
+                if (connectionContainer.Height >= connectionContainer.MaximumSize.Height)
+                {
+                    connectionContainer.Height = connectionContainer.MaximumSize.Height;
+                    connectionCollapse = true;
+                    connectionsTimer.Stop();
+                }
+            }
+        }
+
+        private void btnConnections_Click(object sender, EventArgs e)
+        {
+            connectionsTimer.Start();
         }
     }
 }

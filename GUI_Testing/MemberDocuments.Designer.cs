@@ -52,7 +52,7 @@
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.eventsContainer = new System.Windows.Forms.Panel();
             this.btnEvents = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLibrary = new System.Windows.Forms.Button();
@@ -68,6 +68,9 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.connectionsTimer = new System.Windows.Forms.Timer(this.components);
             this.projectTimer = new System.Windows.Forms.Timer(this.components);
+            this.eventsTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnViewEvents = new System.Windows.Forms.Button();
+            this.btnMyEvents = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -81,7 +84,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.eventsContainer.SuspendLayout();
             this.panel5.SuspendLayout();
             this.connectionContainer.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -303,7 +306,7 @@
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel3);
-            this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Controls.Add(this.eventsContainer);
             this.sidebar.Controls.Add(this.panel5);
             this.sidebar.Controls.Add(this.connectionContainer);
             this.sidebar.Controls.Add(this.panel7);
@@ -367,19 +370,23 @@
             this.btnHome.Location = new System.Drawing.Point(8, 8);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(211, 40);
+            this.btnHome.Size = new System.Drawing.Size(208, 40);
             this.btnHome.TabIndex = 8;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // eventsContainer
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.btnEvents);
-            this.panel4.Location = new System.Drawing.Point(3, 166);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 51);
-            this.panel4.TabIndex = 10;
+            this.eventsContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.eventsContainer.Controls.Add(this.btnMyEvents);
+            this.eventsContainer.Controls.Add(this.btnViewEvents);
+            this.eventsContainer.Controls.Add(this.btnEvents);
+            this.eventsContainer.Location = new System.Drawing.Point(3, 166);
+            this.eventsContainer.MaximumSize = new System.Drawing.Size(222, 159);
+            this.eventsContainer.MinimumSize = new System.Drawing.Size(222, 58);
+            this.eventsContainer.Name = "eventsContainer";
+            this.eventsContainer.Size = new System.Drawing.Size(222, 58);
+            this.eventsContainer.TabIndex = 10;
             // 
             // btnEvents
             // 
@@ -391,16 +398,17 @@
             this.btnEvents.Location = new System.Drawing.Point(8, 8);
             this.btnEvents.Name = "btnEvents";
             this.btnEvents.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnEvents.Size = new System.Drawing.Size(211, 40);
+            this.btnEvents.Size = new System.Drawing.Size(208, 40);
             this.btnEvents.TabIndex = 8;
             this.btnEvents.Text = "Events";
             this.btnEvents.UseVisualStyleBackColor = true;
+            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.btnLibrary);
-            this.panel5.Location = new System.Drawing.Point(3, 223);
+            this.panel5.Location = new System.Drawing.Point(3, 230);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(222, 51);
             this.panel5.TabIndex = 11;
@@ -412,7 +420,7 @@
             this.btnLibrary.ForeColor = System.Drawing.Color.White;
             this.btnLibrary.Image = global::GUI_Testing.Properties.Resources.digitallibrary;
             this.btnLibrary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibrary.Location = new System.Drawing.Point(11, 8);
+            this.btnLibrary.Location = new System.Drawing.Point(8, 8);
             this.btnLibrary.Name = "btnLibrary";
             this.btnLibrary.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnLibrary.Size = new System.Drawing.Size(208, 40);
@@ -426,7 +434,7 @@
             this.connectionContainer.Controls.Add(this.btnConnections);
             this.connectionContainer.Controls.Add(this.btnPosts);
             this.connectionContainer.Controls.Add(this.panel9);
-            this.connectionContainer.Location = new System.Drawing.Point(3, 280);
+            this.connectionContainer.Location = new System.Drawing.Point(3, 287);
             this.connectionContainer.MaximumSize = new System.Drawing.Size(222, 182);
             this.connectionContainer.MinimumSize = new System.Drawing.Size(222, 45);
             this.connectionContainer.Name = "connectionContainer";
@@ -455,13 +463,14 @@
             this.btnConnections.ForeColor = System.Drawing.Color.White;
             this.btnConnections.Image = global::GUI_Testing.Properties.Resources.connection;
             this.btnConnections.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnections.Location = new System.Drawing.Point(11, 3);
+            this.btnConnections.Location = new System.Drawing.Point(8, 2);
             this.btnConnections.Name = "btnConnections";
             this.btnConnections.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnConnections.Size = new System.Drawing.Size(208, 40);
             this.btnConnections.TabIndex = 8;
             this.btnConnections.Text = "      Connections";
             this.btnConnections.UseVisualStyleBackColor = true;
+            this.btnConnections.Click += new System.EventHandler(this.btnConnections_Click);
             // 
             // btnPosts
             // 
@@ -505,7 +514,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.btnNotifications);
-            this.panel7.Location = new System.Drawing.Point(3, 331);
+            this.panel7.Location = new System.Drawing.Point(3, 338);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(222, 51);
             this.panel7.TabIndex = 13;
@@ -517,10 +526,10 @@
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Image = global::GUI_Testing.Properties.Resources.notifcations;
             this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(8, 8);
+            this.btnNotifications.Location = new System.Drawing.Point(8, 3);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNotifications.Size = new System.Drawing.Size(211, 40);
+            this.btnNotifications.Size = new System.Drawing.Size(208, 40);
             this.btnNotifications.TabIndex = 10;
             this.btnNotifications.Text = "      Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -528,7 +537,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btnLogout);
-            this.panel8.Location = new System.Drawing.Point(3, 388);
+            this.panel8.Location = new System.Drawing.Point(3, 395);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(222, 51);
             this.panel8.TabIndex = 14;
@@ -540,7 +549,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::GUI_Testing.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(8, 11);
+            this.btnLogout.Location = new System.Drawing.Point(8, 3);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(211, 40);
@@ -551,11 +560,47 @@
             // connectionsTimer
             // 
             this.connectionsTimer.Interval = 3;
+            this.connectionsTimer.Tick += new System.EventHandler(this.connectionsTimer_Tick);
             // 
             // projectTimer
             // 
             this.projectTimer.Interval = 10;
             this.projectTimer.Tick += new System.EventHandler(this.projectTimer_Tick);
+            // 
+            // eventsTimer
+            // 
+            this.eventsTimer.Interval = 10;
+            this.eventsTimer.Tick += new System.EventHandler(this.eventsTimer_Tick);
+            // 
+            // btnViewEvents
+            // 
+            this.btnViewEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewEvents.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewEvents.ForeColor = System.Drawing.Color.White;
+            this.btnViewEvents.Image = global::GUI_Testing.Properties.Resources.calendar__1_;
+            this.btnViewEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewEvents.Location = new System.Drawing.Point(7, 59);
+            this.btnViewEvents.Name = "btnViewEvents";
+            this.btnViewEvents.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnViewEvents.Size = new System.Drawing.Size(208, 40);
+            this.btnViewEvents.TabIndex = 9;
+            this.btnViewEvents.Text = "View All Events";
+            this.btnViewEvents.UseVisualStyleBackColor = true;
+            // 
+            // btnMyEvents
+            // 
+            this.btnMyEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyEvents.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyEvents.ForeColor = System.Drawing.Color.White;
+            this.btnMyEvents.Image = global::GUI_Testing.Properties.Resources.calendar__1_;
+            this.btnMyEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyEvents.Location = new System.Drawing.Point(7, 116);
+            this.btnMyEvents.Name = "btnMyEvents";
+            this.btnMyEvents.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnMyEvents.Size = new System.Drawing.Size(208, 40);
+            this.btnMyEvents.TabIndex = 10;
+            this.btnMyEvents.Text = "My Events";
+            this.btnMyEvents.UseVisualStyleBackColor = true;
             // 
             // MemberDocuments
             // 
@@ -581,7 +626,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.eventsContainer.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.connectionContainer.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -611,7 +656,7 @@
         private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel eventsContainer;
         private System.Windows.Forms.Button btnEvents;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLibrary;
@@ -632,5 +677,8 @@
         private System.Windows.Forms.Button btnViewPlans;
         private System.Windows.Forms.Button btnNewPlans;
         private System.Windows.Forms.Timer projectTimer;
+        private System.Windows.Forms.Timer eventsTimer;
+        private System.Windows.Forms.Button btnMyEvents;
+        private System.Windows.Forms.Button btnViewEvents;
     }
 }

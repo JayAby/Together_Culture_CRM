@@ -7,6 +7,9 @@ C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\o
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.csproj.CoreCompileInputs.cache
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.exe
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.pdb
-C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.Home.resources
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MemberDocuments.resources
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MemberDocuments_KeyPolicies.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MainForm.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MemberHome.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MembersDocument.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\GUI_Testing\obj\Debug\GUI_Testing.MemberKeyPolicies.resources

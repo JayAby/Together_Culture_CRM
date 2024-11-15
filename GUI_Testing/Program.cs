@@ -10,7 +10,7 @@ namespace GUI_Testing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home()); // Set the Home form as the startup form
+            Application.Run(new MainForm()); // Set the Home form as the startup form
         }
     }
 }

@@ -12,26 +12,56 @@ namespace TCCRM
 {
     public partial class MemberDocument : UserControl
     {
-        private MainForm mainForm;
+        private MemberHome parentHome;
+
+        // Variables to manage the expand/collapse states of the sidebar and other containers
+        bool projectExpand;
+
+        public void SetParentHome(MemberHome home)
+        {
+            parentHome = home;
+        }
 
         public MemberDocument()
         {
             InitializeComponent();
         }
 
-        protected override void OnParentChanged(EventArgs e)
+        private void btnKeyPolicies_Click(object sender, EventArgs e)
         {
-            base.OnParentChanged(e);
-            if (this.Parent is MainForm form)
+            // Show MemberKeyPolicies via parent (MemberHome)
+            parentHome?.ShowMemberKeyPolicies();
+        }
+
+        private void projectTimer_Tick(object sender, EventArgs e)
+        {
+            if (projectExpand)
             {
-                mainForm = form;
+                // If project container is expanded, minimize it
+                projectContainer.Width -= 10;
+                if (projectContainer.Width <= projectContainer.MinimumSize.Width)
+                {
+                    projectContainer.Width = projectContainer.MinimumSize.Width; // Ensure it doesn't go below minimum size
+                    projectExpand = false;
+                    projectTimer.Stop();
+                }
+            }
+            else
+            {
+                // If project container is minimized, maximize it
+                projectContainer.Width += 10;
+                if (projectContainer.Width >= projectContainer.MaximumSize.Width)
+                {
+                    projectContainer.Width = projectContainer.MaximumSize.Width; // Ensure it doesn't exceed maximum size
+                    projectExpand = true;
+                    projectTimer.Stop();
+                }
             }
         }
 
-        private void btnKeyPolicies_Click(object sender, EventArgs e)
+        private void btnProjectPlans_Click(object sender, EventArgs e)
         {
-            // Show Key Policies when the Key Policies button is clicked
-            mainForm.ShowKeyPolicies();
+            projectTimer.Start();
         }
     }
 }

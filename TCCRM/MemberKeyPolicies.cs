@@ -14,26 +14,23 @@ namespace TCCRM
 {
     public partial class MemberKeyPolicies : UserControl
     {
-        private MainForm mainForm;
+        private MemberHome parentHome;
+
+        public void SetParentHome(MemberHome home)
+        {
+            parentHome = home;
+        }
 
         public MemberKeyPolicies()
         {
             InitializeComponent();
         }
 
-        protected override void OnParentChanged(EventArgs e)
-        {
-            base.OnParentChanged(e);
-            if (this.Parent is MainForm form)
-            {
-                mainForm = form;
-            }
-        }
-
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            // Hide Key Policies and return to MemberHome
-            mainForm.ShowMemberHome();
+            // Return to MemberHome (reset view)
+            parentHome?.ReturnHome();
         }
+
     }
 }

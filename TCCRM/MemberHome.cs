@@ -12,7 +12,8 @@ namespace TCCRM
 {
     public partial class MemberHome : UserControl
     {
-        private MainForm mainForm;
+        private MemberDocument memberDocument;
+        private MemberKeyPolicies memberKeyPolicies;
 
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool sidebarExpand;
@@ -23,23 +24,60 @@ namespace TCCRM
         public MemberHome()
         {
             InitializeComponent();
-        }
-
-        protected override void OnParentChanged(EventArgs e)
-        {
-            base.OnParentChanged(e);
-            if (this.Parent is MainForm form)
+            // Initialize MemberDocument and KeyPolicies
+            memberDocument = new MemberDocument
             {
-                mainForm = form;
-            }
+                Dock = DockStyle.Fill,
+                Visible = false // Hide initially
+            };
+
+            memberKeyPolicies = new MemberKeyPolicies
+            {
+                Dock = DockStyle.Fill,
+                Visible = false // Hide initially
+            };
+
+            // Add them to the main container
+            mainContainer.Controls.Add(memberDocument);
+            mainContainer.Controls.Add(memberKeyPolicies);
+
+            // Set the parent home for both controls so they can call methods in MemberHome
+            memberDocument.SetParentHome(this);
+            memberKeyPolicies.SetParentHome(this);
         }
 
         private void btnDocuments_Click(object sender, EventArgs e)
         {
-            // Show MemberDocument when Documents button is clicked
-            mainForm.ShowMemberDocument();
+            // Hide other controls and show MemberDocument
+            foreach (Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+
+            memberDocument.Visible = true;
+            memberDocument.BringToFront();
         }
-    
+
+        public void ShowMemberKeyPolicies()
+        {
+            // Hide other controls and show MemberKeyPolicies
+            foreach (Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+
+            memberKeyPolicies.Visible = true;
+            memberKeyPolicies.BringToFront();
+        }
+
+        public void ReturnHome()
+        {
+            // Hide MemberDocument and MemberKeyPolicies, show MemberHome (reset state)
+            foreach (Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+        }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
@@ -171,6 +209,12 @@ namespace TCCRM
         {
             profileTimer.Start();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ReturnHome();
+        }
+
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace TCCRM
 {
-    partial class MainForm
+    partial class MemberMainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // MemberMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1262, 773);
-            this.Name = "Form1";
+            this.Name = "MemberMainForm";
             this.Text = "Together Culture";
             this.ResumeLayout(false);
 

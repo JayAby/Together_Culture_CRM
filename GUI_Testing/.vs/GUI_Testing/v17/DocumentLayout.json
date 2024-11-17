@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\gui_testing\\memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MainForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MembersDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MembersDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MembersDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MembersDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\memberkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\gui_testing\\memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\membersdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -23,20 +43,8 @@
       "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\memberkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\gui_testing\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberdocuments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\gui_testing\\memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\mdkeypolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -51,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MainForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MainForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MDKeyPolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A62FEDA-3249-4F72-B8F2-357E7285B46B}|GUI_Testing.csproj|solutionrelative:MDKeyPolicies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,24 +70,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T14:43:11.159Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "MemberDocuments.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberDocuments.cs",
               "RelativeDocumentMoniker": "MemberDocuments.cs",
@@ -91,11 +96,12 @@
               "RelativeToolTip": "MemberDocuments.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T13:44:33.242Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MDKeyPolicies.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MDKeyPolicies.cs",
               "RelativeDocumentMoniker": "MDKeyPolicies.cs",
@@ -103,19 +109,20 @@
               "RelativeToolTip": "MDKeyPolicies.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T23:09:41.491Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MemberHome.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberHome.cs",
-              "RelativeDocumentMoniker": "MemberHome.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberHome.cs",
-              "RelativeToolTip": "MemberHome.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "MemberDocuments.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberDocuments.cs",
+              "RelativeDocumentMoniker": "MemberDocuments.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberDocuments.cs",
+              "RelativeToolTip": "MemberDocuments.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAApwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:57:41.316Z",
+              "WhenOpened": "2024-11-17T00:37:17.13Z",
               "EditorCaption": ""
             },
             {
@@ -124,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -136,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "MemberKeyPolicies.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberKeyPolicies.cs",
               "RelativeDocumentMoniker": "MemberKeyPolicies.cs",
@@ -149,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MemberHome.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberHome.cs",
               "RelativeDocumentMoniker": "MemberHome.cs",
@@ -161,7 +168,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:58:48.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MemberKeyPolicies.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberKeyPolicies.cs",
               "RelativeDocumentMoniker": "MemberKeyPolicies.cs",
@@ -179,14 +199,27 @@
               "RelativeDocumentMoniker": "MembersDocument.cs",
               "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MembersDocument.cs",
               "RelativeToolTip": "MembersDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T20:30:22.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "MemberHome.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberHome.cs",
+              "RelativeDocumentMoniker": "MemberHome.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberHome.cs",
+              "RelativeToolTip": "MemberHome.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T14:57:41.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MembersDocument.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MembersDocument.cs",
               "RelativeDocumentMoniker": "MembersDocument.cs",
@@ -198,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MemberKeyPolicies.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MemberKeyPolicies.Designer.cs",
               "RelativeDocumentMoniker": "MemberKeyPolicies.Designer.cs",
@@ -211,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -219,23 +252,12 @@
               "RelativeToolTip": "MainForm.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T23:17:40.612Z"
+              "WhenOpened": "2024-11-13T23:17:40.612Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwB8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T20:58:48.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MDKeyPolicies.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\GUI_Testing\\MDKeyPolicies.cs",
               "RelativeDocumentMoniker": "MDKeyPolicies.cs",
@@ -243,7 +265,8 @@
               "RelativeToolTip": "MDKeyPolicies.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T23:42:17.111Z"
+              "WhenOpened": "2024-11-02T23:42:17.111Z",
+              "EditorCaption": ""
             }
           ]
         }

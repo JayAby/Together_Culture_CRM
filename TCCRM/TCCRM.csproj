@@ -58,6 +58,18 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMakeEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminMakeEvents.Designer.cs">
+      <DependentUpon>AdminMakeEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminViewEvents.Designer.cs">
+      <DependentUpon>AdminViewEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMakeEvents.resx">
+      <DependentUpon>AdminMakeEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViewEvents.resx">
+      <DependentUpon>AdminViewEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberMainForm.resx">
       <DependentUpon>MemberMainForm.cs</DependentUpon>

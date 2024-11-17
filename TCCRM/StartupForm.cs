@@ -19,19 +19,38 @@ namespace TCCRM
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            // If Admin is selcted, show AdminMainForm
+            // Hide the StartupForm
             this.Hide();
-            AdminMainForm adminForm = new AdminMainForm();
-            adminForm.Show();
+
+            // Open AdminMainForm
+            using (AdminMainForm adminForm = new AdminMainForm())
+            {
+                adminForm.ShowDialog(); // Show AdminMainForm as a modal dialog
+            }
+
+            // Show the StartupForm again when AdminMainForm is closed
+            this.Show();
         }
 
         private void btnMember_Click(object sender, EventArgs e)
         {
-            // If Member is selcted, show MemberMainForm
+            // Hide the StartupForm
             this.Hide();
-            MemberMainForm memberForm = new MemberMainForm();
-            memberForm.Show();
+
+            // Open MemberMainForm
+            using (MemberMainForm memberForm = new MemberMainForm())
+            {
+                memberForm.ShowDialog(); // Show MemberMainForm as a modal dialog
+            }
+
+            // Show the StartupForm again when MemberMainForm is closed
+            this.Show();
         }
 
+        private void StartupForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Ensure the application terminates when startupform is closed
+            Application.Exit();
+        }     
     }
 }

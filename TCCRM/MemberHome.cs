@@ -14,6 +14,8 @@ namespace TCCRM
     {
         private MemberDocument memberDocument;
         private MemberKeyPolicies memberKeyPolicies;
+        private MemberChat memberChat;
+        private MemberPosts memberPosts;
 
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool sidebarExpand;
@@ -24,28 +26,48 @@ namespace TCCRM
         public MemberHome()
         {
             InitializeComponent();
-            // Initialize MemberDocument and KeyPolicies
+            // Initialize MemberDocument
             memberDocument = new MemberDocument
             {
                 Dock = DockStyle.Fill,
                 Visible = false // Hide initially
             };
 
+            // Initialize MemberKeyPolicies
             memberKeyPolicies = new MemberKeyPolicies
             {
                 Dock = DockStyle.Fill,
                 Visible = false // Hide initially
             };
 
+            // Initialize MemberChat
+            memberChat = new MemberChat
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+
+            // Initialize MemberPosts
+            memberPosts = new MemberPosts
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+
             // Add them to the main container
             mainContainer.Controls.Add(memberDocument);
             mainContainer.Controls.Add(memberKeyPolicies);
+            mainContainer.Controls.Add(memberChat);
+            mainContainer.Controls.Add(memberPosts);
 
             // Set the parent home for both controls so they can call methods in MemberHome
             memberDocument.SetParentHome(this);
             memberKeyPolicies.SetParentHome(this);
+            memberChat.SetParentHome(this);
+            memberPosts.SetParentHome(this);
         }
 
+        // When Document button is clicked
         private void btnDocuments_Click(object sender, EventArgs e)
         {
             // Hide other controls and show MemberDocument
@@ -215,6 +237,31 @@ namespace TCCRM
             ReturnHome();
         }
 
+        // When Chats button is clicked 
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            // Hide other controls and show MemmberChats on the MainContainer
+            foreach(Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+
+            memberChat.Visible = true;
+            memberChat.BringToFront();
+        }
+
+        // When Posts Button is clicked
+        private void btnPosts_Click(object sender, EventArgs e)
+        {
+            // Hide other controls and show MemberPosts on the MainContainer
+            foreach(Control control in mainContainer.Controls)
+            {
+                control.Visible=false;
+            }
+
+            memberPosts.Visible = true;
+            memberPosts.BringToFront();
+        }
     }
 }
 

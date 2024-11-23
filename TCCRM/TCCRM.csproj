@@ -70,6 +70,12 @@
     <Compile Include="AdminViewEvents.Designer.cs">
       <DependentUpon>AdminViewEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberChat.Designer.cs">
+      <DependentUpon>MemberChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     <Compile Include="MemberKeyPolicies.Designer.cs">
       <DependentUpon>MemberKeyPolicies.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberPosts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberPosts.Designer.cs">
+      <DependentUpon>MemberPosts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupForm.cs">
@@ -114,6 +126,9 @@
     <EmbeddedResource Include="AdminViewEvents.resx">
       <DependentUpon>AdminViewEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemberChat.resx">
+      <DependentUpon>MemberChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemberMainForm.resx">
       <DependentUpon>MemberMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberKeyPolicies.resx">
       <DependentUpon>MemberKeyPolicies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberPosts.resx">
+      <DependentUpon>MemberPosts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

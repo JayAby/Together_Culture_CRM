@@ -16,3 +16,5 @@ C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Deb
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.StartupForm.resources
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.AdminViewEvents.resources
 C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.AdminMakeEvents.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MemberChat.resources
+C:\Users\Jo3l\Desktop\ARU\SoftwareEngineering\Together_Culture_CRM\TCCRM\obj\Debug\TCCRM.MemberPosts.resources

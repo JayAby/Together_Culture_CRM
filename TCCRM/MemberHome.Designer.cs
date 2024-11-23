@@ -258,7 +258,7 @@
             this.connectionContainer.MaximumSize = new System.Drawing.Size(222, 171);
             this.connectionContainer.MinimumSize = new System.Drawing.Size(222, 47);
             this.connectionContainer.Name = "connectionContainer";
-            this.connectionContainer.Size = new System.Drawing.Size(222, 47);
+            this.connectionContainer.Size = new System.Drawing.Size(222, 171);
             this.connectionContainer.TabIndex = 12;
             // 
             // panel9
@@ -287,7 +287,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.btnNotifications);
-            this.panel7.Location = new System.Drawing.Point(3, 336);
+            this.panel7.Location = new System.Drawing.Point(3, 460);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(222, 51);
             this.panel7.TabIndex = 13;
@@ -295,7 +295,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btnLogout);
-            this.panel8.Location = new System.Drawing.Point(3, 393);
+            this.panel8.Location = new System.Drawing.Point(3, 517);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(222, 51);
             this.panel8.TabIndex = 14;
@@ -457,6 +457,7 @@
             this.btnChats.TabIndex = 8;
             this.btnChats.Text = "Chats";
             this.btnChats.UseVisualStyleBackColor = true;
+            this.btnChats.Click += new System.EventHandler(this.btnChats_Click);
             // 
             // btnConnections
             // 
@@ -488,6 +489,7 @@
             this.btnPosts.TabIndex = 8;
             this.btnPosts.Text = "Posts";
             this.btnPosts.UseVisualStyleBackColor = true;
+            this.btnPosts.Click += new System.EventHandler(this.btnPosts_Click);
             // 
             // btnNotifications
             // 

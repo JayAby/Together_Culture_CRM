@@ -30,11 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMakePost = new System.Windows.Forms.Button();
             this.txtPosts = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,6 +60,22 @@
             this.panel3.Size = new System.Drawing.Size(716, 305);
             this.panel3.TabIndex = 2;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(379, 22);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(216, 217);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(88, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 217);
+            this.textBox1.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnMakePost);
@@ -78,6 +94,7 @@
             this.btnMakePost.Size = new System.Drawing.Size(95, 27);
             this.btnMakePost.TabIndex = 2;
             this.btnMakePost.UseVisualStyleBackColor = true;
+            this.btnMakePost.Click += new System.EventHandler(this.btnMakePost_Click);
             // 
             // txtPosts
             // 
@@ -88,22 +105,6 @@
             this.txtPosts.Size = new System.Drawing.Size(363, 140);
             this.txtPosts.TabIndex = 0;
             this.txtPosts.Text = "Make a Post...";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(88, 22);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 217);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(379, 22);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 217);
-            this.textBox2.TabIndex = 1;
             // 
             // MemberPosts
             // 

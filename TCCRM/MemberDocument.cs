@@ -14,6 +14,7 @@ namespace TCCRM
     {
         private MemberHome parentHome;
 
+
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool projectExpand;
 
@@ -29,8 +30,7 @@ namespace TCCRM
 
         private void btnKeyPolicies_Click(object sender, EventArgs e)
         {
-            // Show MemberKeyPolicies via parent (MemberHome)
-            parentHome?.ShowMemberKeyPolicies();
+            parentHome.ShowMemberKeyPolicies();
         }
 
         private void projectTimer_Tick(object sender, EventArgs e)
@@ -62,6 +62,16 @@ namespace TCCRM
         private void btnProjectPlans_Click(object sender, EventArgs e)
         {
             projectTimer.Start();
+        }
+
+        private void btnNewPlans_Click(object sender, EventArgs e)
+        {
+            parentHome.CreateNewProjectPlan();
+        }
+
+        private void btnViewPlans_Click(object sender, EventArgs e)
+        {
+            parentHome.ShowProjectPlan();
         }
     }
 }

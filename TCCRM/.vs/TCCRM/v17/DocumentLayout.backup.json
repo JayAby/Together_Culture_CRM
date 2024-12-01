@@ -3,44 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\startupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:startupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\createnewplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:createnewplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\loggedinmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:loggedinmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\membermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:membermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\viewprojectplan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:viewprojectplan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\projectplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:projectplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\memberkeypolicies.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberkeypolicies.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|c:\\users\\jo3l\\desktop\\aru\\softwareengineering\\together_culture_crm\\tccrm\\startupform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:startupform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\membermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:membermainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\startupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:startupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4592458A-42C9-4BD7-8137-7E7C76AD3837}|TCCRM.csproj|solutionrelative:memberposts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,46 +58,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "StartupForm.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\StartupForm.cs",
               "RelativeDocumentMoniker": "StartupForm.cs",
               "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\StartupForm.cs",
               "RelativeToolTip": "StartupForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T21:28:55.315Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MemberMainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberMainForm.cs",
-              "RelativeDocumentMoniker": "MemberMainForm.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberMainForm.cs",
-              "RelativeToolTip": "MemberMainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T04:10:07.333Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminMainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\AdminMainForm.cs",
-              "RelativeDocumentMoniker": "AdminMainForm.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\AdminMainForm.cs",
-              "RelativeToolTip": "AdminMainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T02:40:09.365Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -97,85 +80,144 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MemberPosts.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs",
-              "RelativeDocumentMoniker": "MemberPosts.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs",
-              "RelativeToolTip": "MemberPosts.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwA0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreateNewPlans.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\CreateNewPlans.cs",
+              "RelativeDocumentMoniker": "CreateNewPlans.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\CreateNewPlans.cs [Design]",
+              "RelativeToolTip": "CreateNewPlans.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:47:33.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MemberChat.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberChat.cs",
-              "RelativeDocumentMoniker": "MemberChat.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberChat.cs",
-              "RelativeToolTip": "MemberChat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:25:51.418Z"
+              "WhenOpened": "2024-12-01T14:23:19.07Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "LoggedInMember.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\LoggedInMember.cs",
+              "RelativeDocumentMoniker": "LoggedInMember.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\LoggedInMember.cs",
+              "RelativeToolTip": "LoggedInMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T17:00:47.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MemberMainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberMainForm.cs",
+              "RelativeDocumentMoniker": "MemberMainForm.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberMainForm.cs",
+              "RelativeToolTip": "MemberMainForm.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T14:43:51.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:39:50.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewProjectPlan.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\ViewProjectPlan.Designer.cs",
+              "RelativeDocumentMoniker": "ViewProjectPlan.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\ViewProjectPlan.Designer.cs",
+              "RelativeToolTip": "ViewProjectPlan.Designer.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAADgv2MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T01:23:44.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectPlan.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\ProjectPlan.cs",
+              "RelativeDocumentMoniker": "ProjectPlan.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\ProjectPlan.cs",
+              "RelativeToolTip": "ProjectPlan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T08:49:17.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MemberPosts.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs",
               "RelativeDocumentMoniker": "MemberPosts.cs",
               "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs [Design]",
               "RelativeToolTip": "MemberPosts.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:35:50.888Z"
+              "WhenOpened": "2024-11-18T16:35:50.888Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MemberHome.cs",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberHome.cs",
-              "RelativeDocumentMoniker": "MemberHome.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberHome.cs",
-              "RelativeToolTip": "MemberHome.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAiwAUBAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:23:41.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MemberHome.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberHome.cs",
-              "RelativeDocumentMoniker": "MemberHome.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberHome.cs [Design]",
-              "RelativeToolTip": "MemberHome.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:23:18.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MemberDocument.cs",
               "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberDocument.cs",
               "RelativeDocumentMoniker": "MemberDocument.cs",
               "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberDocument.cs",
               "RelativeToolTip": "MemberDocument.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAWwEkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:25:55.082Z"
+              "WhenOpened": "2024-11-18T16:25:55.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MemberDocument.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberDocument.cs",
-              "RelativeDocumentMoniker": "MemberDocument.cs",
-              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberDocument.cs [Design]",
-              "RelativeToolTip": "MemberDocument.cs [Design]",
+              "DocumentIndex": 9,
+              "Title": "MemberKeyPolicies.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberKeyPolicies.Designer.cs",
+              "RelativeDocumentMoniker": "MemberKeyPolicies.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberKeyPolicies.Designer.cs",
+              "RelativeToolTip": "MemberKeyPolicies.Designer.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv00AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T16:12:01.228Z"
+              "WhenOpened": "2024-11-28T04:31:25.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StartupForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\StartupForm.Designer.cs",
+              "RelativeDocumentMoniker": "StartupForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\StartupForm.Designer.cs",
+              "RelativeToolTip": "StartupForm.Designer.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAArwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T03:20:48.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MemberPosts.cs",
+              "DocumentMoniker": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs",
+              "RelativeDocumentMoniker": "MemberPosts.cs",
+              "ToolTip": "C:\\Users\\Jo3l\\Desktop\\ARU\\SoftwareEngineering\\Together_Culture_CRM\\TCCRM\\MemberPosts.cs",
+              "RelativeToolTip": "MemberPosts.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T16:47:33.172Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -16,6 +16,9 @@ namespace TCCRM
         private MemberKeyPolicies memberKeyPolicies;
         private MemberChat memberChat;
         private MemberPosts memberPosts;
+        private CreateNewPlans createNewPlans;
+        private ViewProjectPlan viewProjectPlan;
+        private LoggedInMember loggedInMember;
 
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool sidebarExpand;
@@ -23,9 +26,11 @@ namespace TCCRM
         bool connectionCollapse;
         bool profileExpand;
 
-        public MemberHome()
+        public MemberHome(LoggedInMember member)
         {
             InitializeComponent();
+            loggedInMember = member;
+
             // Initialize MemberDocument
             memberDocument = new MemberDocument
             {
@@ -54,19 +59,41 @@ namespace TCCRM
                 Visible = false
             };
 
+            // Initialize Create New Plans
+            createNewPlans = new CreateNewPlans(loggedInMember)
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+
+            // Initialize View Project Plans
+            viewProjectPlan = new ViewProjectPlan(loggedInMember)
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+
+
             // Add them to the main container
             mainContainer.Controls.Add(memberDocument);
             mainContainer.Controls.Add(memberKeyPolicies);
             mainContainer.Controls.Add(memberChat);
             mainContainer.Controls.Add(memberPosts);
+            mainContainer.Controls.Add(createNewPlans);
+            mainContainer.Controls.Add(viewProjectPlan);
 
             // Set the parent home for both controls so they can call methods in MemberHome
             memberDocument.SetParentHome(this);
             memberKeyPolicies.SetParentHome(this);
             memberChat.SetParentHome(this);
             memberPosts.SetParentHome(this);
-        }
+            createNewPlans.SetParentHome(this);
+            viewProjectPlan.SetParentHome(this);
 
+            // Set the reference of ViewProjectPlan to CreateNewPlan
+            createNewPlans.SetViewProjectPlan(viewProjectPlan);
+        }
+        
         // When Document button is clicked
         private void btnDocuments_Click(object sender, EventArgs e)
         {
@@ -82,15 +109,70 @@ namespace TCCRM
 
         public void ShowMemberKeyPolicies()
         {
-            // Hide other controls and show MemberKeyPolicies
+            if (loggedInMember == null)
+            {
+                MessageBox.Show("Log in please.");
+                return;
+            }
+            // Get Member_ID
+            int memberID = loggedInMember.MemberID;
+
+            // Connect to the db
+            DatabaseOperations dbOps = new DatabaseOperations(
+                server: "localhost",
+                database: "togetherculturecrm",
+                username: "root",
+                password: ""
+            );
+
+            // Retreive Specific Member Key Policy
+            KeyPolicy keyPolicy = dbOps.GetKeyPolicy(memberID);
+
+            // Hide other controls
+            foreach(Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+
+            // if a key policy was found, populate the form with the retreived data
+            if (keyPolicy != null)
+            {
+                memberKeyPolicies.PopulateKeyPolicy(keyPolicy);
+                memberKeyPolicies.Visible = true;
+                memberKeyPolicies.BringToFront();
+
+            }
+            else
+            {
+                MessageBox.Show("No Key Policy found for this member.", "Key Policies", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        public void CreateNewProjectPlan()
+        {
+            // Hide other controls
             foreach (Control control in mainContainer.Controls)
             {
                 control.Visible = false;
             }
 
-            memberKeyPolicies.Visible = true;
-            memberKeyPolicies.BringToFront();
+            createNewPlans.Visible = true;
+            createNewPlans.BringToFront();
         }
+
+        public void ShowProjectPlan()
+        {
+            // Hide other controls
+            foreach (Control control in mainContainer.Controls)
+            {
+                control.Visible = false;
+            }
+
+            viewProjectPlan.Visible = true;
+            viewProjectPlan.BringToFront();
+        }
+
 
         public void ReturnHome()
         {

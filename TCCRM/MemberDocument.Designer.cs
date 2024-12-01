@@ -60,7 +60,7 @@
             this.projectContainer.MaximumSize = new System.Drawing.Size(571, 316);
             this.projectContainer.MinimumSize = new System.Drawing.Size(313, 316);
             this.projectContainer.Name = "projectContainer";
-            this.projectContainer.Size = new System.Drawing.Size(313, 316);
+            this.projectContainer.Size = new System.Drawing.Size(571, 316);
             this.projectContainer.TabIndex = 12;
             // 
             // btnViewPlans
@@ -76,6 +76,7 @@
             this.btnViewPlans.TabIndex = 11;
             this.btnViewPlans.Text = "View Existing Plans";
             this.btnViewPlans.UseVisualStyleBackColor = true;
+            this.btnViewPlans.Click += new System.EventHandler(this.btnViewPlans_Click);
             // 
             // btnNewPlans
             // 
@@ -90,6 +91,7 @@
             this.btnNewPlans.TabIndex = 10;
             this.btnNewPlans.Text = "Create New Plans";
             this.btnNewPlans.UseVisualStyleBackColor = true;
+            this.btnNewPlans.Click += new System.EventHandler(this.btnNewPlans_Click);
             // 
             // btnProjectPlans
             // 

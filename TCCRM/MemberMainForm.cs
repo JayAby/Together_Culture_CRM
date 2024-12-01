@@ -13,19 +13,35 @@ namespace TCCRM
     public partial class MemberMainForm : Form
     {
         private MemberHome memberHome;
+        private MemberKeyPolicies memberKeyPolicies;
 
-        public MemberMainForm()
+        public MemberMainForm(LoggedInMember loggedInMember)
         {
             InitializeComponent();
 
             // Initialize MemberHome as the default view
-            memberHome = new MemberHome
+            memberHome = new MemberHome(loggedInMember)
             {
                 Dock = DockStyle.Fill
             };
 
             // Add MemberHome to MainForm
             this.Controls.Add(memberHome);
+
+            // Initialize MemberKeyPolices
+            memberKeyPolicies = new MemberKeyPolicies
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+        }
+
+
+        // Return Home
+        public void ReturnHome()
+        {
+            memberHome.Visible = true;
+            memberKeyPolicies.Visible= false;
         }
 
     }

@@ -32,5 +32,13 @@ namespace TCCRM
             parentHome?.ReturnHome();
         }
 
+        // Method to Populate the form with Key Policy details
+        public void PopulateKeyPolicy(KeyPolicy keyPolicy)
+        {
+            lblPolicyTitle.Text = keyPolicy.Title; // Display Title
+            txtPolicyContent.Text = keyPolicy.Content; // Display Content
+            txtPolicyContent.ReadOnly = true;
+        }
+
     }
 }

@@ -28,22 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMakePost = new System.Windows.Forms.Button();
             this.txtPosts = new System.Windows.Forms.TextBox();
+            this.updatePostsTimer = new System.Windows.Forms.Timer(this.components);
+            this.postTemplate = new System.Windows.Forms.Panel();
+            this.lblUsernameTemplate = new System.Windows.Forms.Label();
+            this.lblDateTemplate = new System.Windows.Forms.Label();
+            this.txtContentTemplate = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.flowLayoutPosts.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.postTemplate.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.flowLayoutPosts);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -51,30 +56,14 @@
             this.panel1.Size = new System.Drawing.Size(891, 578);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // flowLayoutPosts
             // 
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(76, 241);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(716, 305);
-            this.panel3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(379, 22);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 217);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(88, 22);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 217);
-            this.textBox1.TabIndex = 0;
+            this.flowLayoutPosts.AutoScroll = true;
+            this.flowLayoutPosts.Controls.Add(this.postTemplate);
+            this.flowLayoutPosts.Location = new System.Drawing.Point(93, 254);
+            this.flowLayoutPosts.Name = "flowLayoutPosts";
+            this.flowLayoutPosts.Size = new System.Drawing.Size(737, 299);
+            this.flowLayoutPosts.TabIndex = 3;
             // 
             // panel2
             // 
@@ -106,6 +95,54 @@
             this.txtPosts.TabIndex = 0;
             this.txtPosts.Text = "Make a Post...";
             // 
+            // updatePostsTimer
+            // 
+            this.updatePostsTimer.Interval = 5000;
+            this.updatePostsTimer.Tick += new System.EventHandler(this.updatePostsTimer_Tick);
+            // 
+            // postTemplate
+            // 
+            this.postTemplate.BackColor = System.Drawing.Color.White;
+            this.postTemplate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.postTemplate.Controls.Add(this.txtContentTemplate);
+            this.postTemplate.Controls.Add(this.lblDateTemplate);
+            this.postTemplate.Controls.Add(this.lblUsernameTemplate);
+            this.postTemplate.Location = new System.Drawing.Point(3, 3);
+            this.postTemplate.Name = "postTemplate";
+            this.postTemplate.Size = new System.Drawing.Size(734, 280);
+            this.postTemplate.TabIndex = 0;
+            this.postTemplate.Visible = false;
+            // 
+            // lblUsernameTemplate
+            // 
+            this.lblUsernameTemplate.AutoSize = true;
+            this.lblUsernameTemplate.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameTemplate.Location = new System.Drawing.Point(40, 34);
+            this.lblUsernameTemplate.Name = "lblUsernameTemplate";
+            this.lblUsernameTemplate.Size = new System.Drawing.Size(88, 24);
+            this.lblUsernameTemplate.TabIndex = 0;
+            this.lblUsernameTemplate.Text = "Username";
+            // 
+            // lblDateTemplate
+            // 
+            this.lblDateTemplate.AutoSize = true;
+            this.lblDateTemplate.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTemplate.Location = new System.Drawing.Point(149, 34);
+            this.lblDateTemplate.Name = "lblDateTemplate";
+            this.lblDateTemplate.Size = new System.Drawing.Size(49, 24);
+            this.lblDateTemplate.TabIndex = 1;
+            this.lblDateTemplate.Text = "Date";
+            // 
+            // txtContentTemplate
+            // 
+            this.txtContentTemplate.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContentTemplate.Location = new System.Drawing.Point(43, 98);
+            this.txtContentTemplate.Multiline = true;
+            this.txtContentTemplate.Name = "txtContentTemplate";
+            this.txtContentTemplate.ReadOnly = true;
+            this.txtContentTemplate.Size = new System.Drawing.Size(405, 130);
+            this.txtContentTemplate.TabIndex = 2;
+            // 
             // MemberPosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -114,10 +151,11 @@
             this.Name = "MemberPosts";
             this.Size = new System.Drawing.Size(891, 578);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.flowLayoutPosts.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.postTemplate.ResumeLayout(false);
+            this.postTemplate.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -127,9 +165,12 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtPosts;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnMakePost;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPosts;
+        private System.Windows.Forms.Timer updatePostsTimer;
+        private System.Windows.Forms.Panel postTemplate;
+        private System.Windows.Forms.TextBox txtContentTemplate;
+        private System.Windows.Forms.Label lblDateTemplate;
+        private System.Windows.Forms.Label lblUsernameTemplate;
     }
 }

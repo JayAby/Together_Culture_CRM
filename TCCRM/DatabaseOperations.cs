@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using MySql.Data.MySqlClient;
 
 namespace TCCRM
@@ -226,113 +229,33 @@ namespace TCCRM
 
         #region Chats
         // Method to Retreive all Members
-        public List<LoggedInMember> GetAllMembers(int excludeMemberID)
+        public List<LoggedInUser> GetAllMembers(int excludeMemberID)
         {
-            var members = new List<LoggedInMember>();
-
-            string retreiveMembersQuery = @"SELECT member_id, user_name
-            FROM Members
-            WHERE member_id != @ExcludeMemberID;";
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString)) 
-            {
-                connection.Open();
-
-                using (MySqlCommand command = new MySqlCommand(@retreiveMembersQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@ExcludeMemberID", excludeMemberID);
-
-                    var reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        members.Add(new LoggedInMember
-                        {
-                            MemberID = reader.GetInt32("member_id"),
-                            Username = reader.GetString("user_name")
-                        });
-                    }
-                }
-
-            }
-
-            return members;
-        }
-        // Method to Send Messages
-        public void SendMessage(int senderID, int receiverID, string messageContent)
-        {
-            string sendMessageQuery = @"
-                INSERT INTO Chats (sender_id, receiver_id, message_content, sent_time)
-                VALUES (@SenderID, @ReceiverID, @MessageContent, @SentTime);";
+            var members = new List<LoggedInUser>();
 
             try
             {
+                string retreiveMembersQuery = @"
+                    SELECT member_id, user_name
+                    FROM Members
+                    WHERE member_id != @ExcludeMemberID;";
+
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    using (MySqlCommand command = new MySqlCommand(sendMessageQuery, connection))
+                    using (MySqlCommand command = new MySqlCommand(@retreiveMembersQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@SenderID", senderID);
-                        command.Parameters.AddWithValue("@Receiver", receiverID);
-                        command.Parameters.AddWithValue("@MessageContent", messageContent);
-                        command.Parameters.AddWithValue("@SentTime", DateTime.Now);
-
-                        command.ExecuteNonQuery();
-
-                    }
-                }
-
-                Console.WriteLine("Sent");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-
-            }
-
-        }
-
-        // Retreive Messages
-        public List<ChatMessage> GetMessages(int senderID, int receiverID)
-        {
-            List<ChatMessage> messages = new List<ChatMessage>();
-
-            string retreiveMessagesQuery = @"
-                SELECT
-                    m.user_name AS sender_name,
-                    c.message_content,
-                    c.sent_time
-                FROM Chats c
-                JOIN Members m ON c.sender_id = m.user_id
-                WHERE
-                    (c.sender_id = @SenderID AND c.receiver_id = @ReceiverID) OR
-                    (c.sender_id = @ReceiverID AND c.receiver_id = @SenderID)
-                ORDER BY c.sent_time";
-
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    using (MySqlCommand command = new MySqlCommand(retreiveMessagesQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@SenderID", senderID);
-                        command.Parameters.AddWithValue("@ReceiverID", receiverID);
+                        command.Parameters.AddWithValue("@ExcludeMemberID", excludeMemberID);
 
                         using (var reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                messages.Add(new ChatMessage
+                                members.Add(new LoggedInUser
                                 {
-                                    //SenderID = reader.GetInt32("SenderID"),
-                                    //ReceiverID = reader.GetInt32("ReceiverID"),
-                                    SenderName = reader.GetString("sender_name"),
-                                    MessageContent = reader.GetString("MessageContent"),
-                                    SentTime = reader.GetDateTime("SentTime")
-
+                                    MemberID = reader.GetInt32("member_id"),
+                                    Username = reader.GetString("user_name")
                                 });
                             }
                         }
@@ -340,13 +263,399 @@ namespace TCCRM
 
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)    
             {
-                Console.WriteLine($"Error: {ex.Message} ");    
+                MessageBox.Show($"Error : {ex.Message}");
+                return new List<LoggedInUser>();
             }
 
-            return messages; 
+            return members;
+
+
         }
+        // Method to Send Messages
+        public async Task<bool> SendMessageAsync(int senderID, int receiverID, string messageContent)
+        {
+            try
+            {
+                // Debugging: Log senderID
+                Console.WriteLine($"Attempting to send message from Sender ID: {senderID}, Receiver ID: {receiverID}");
+
+                // Connection string and SQL queries
+                string checkMemberQuery = "SELECT COUNT(*) FROM Members WHERE member_id = @MemberID";
+                string insertChatQuery = @"
+                    INSERT INTO Chats (sender_id, receiver_id, message_content, sent_time)
+                    VALUES (@SenderID, @ReceiverID, @MessageContent, @SentTime);";
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    // Check if the sender exists
+                    using (MySqlCommand checkSenderCommand = new MySqlCommand(checkMemberQuery, connection))
+                    {
+                        checkSenderCommand.Parameters.AddWithValue("@MemberID", senderID);
+                        int senderCount = Convert.ToInt32(await checkSenderCommand.ExecuteScalarAsync());
+                        if (senderCount == 0)
+                        {
+                            Console.WriteLine($"Sender ID {senderID} does not exist in the Members table.");
+                            return false; // Sender does not exist
+                        }
+                    }
+
+                    // Check if the receiver exists
+                    using (MySqlCommand checkReceiverCommand = new MySqlCommand(checkMemberQuery, connection))
+                    {
+                        checkReceiverCommand.Parameters.AddWithValue("@MemberID", receiverID);
+                        int receiverCount = Convert.ToInt32(await checkReceiverCommand.ExecuteScalarAsync());
+                        if (receiverCount == 0)
+                        {
+                            Console.WriteLine($"Receiver ID {receiverID} does not exist in the Members table.");
+                            return false; // Receiver does not exist
+                        }
+                    }
+
+                    // Insert the message into the Chats table
+                    using (MySqlCommand insertCommand = new MySqlCommand(insertChatQuery, connection))
+                    {
+                        insertCommand.Parameters.AddWithValue("@SenderID", senderID);
+                        insertCommand.Parameters.AddWithValue("@ReceiverID", receiverID);
+                        insertCommand.Parameters.AddWithValue("@MessageContent", messageContent);
+                        insertCommand.Parameters.AddWithValue("@SentTime", DateTime.Now);
+
+                        await insertCommand.ExecuteNonQueryAsync();
+                    }
+
+                    return true; // Message sent successfully
+           
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error sending message: {ex.Message}");
+                return false;
+            }
+
+        }
+
+
+        // Retreive Messages
+        public async Task<List<ChatMessage>> GetMessagesAsync(int senderID, int receiverID)
+        {
+            try
+            {
+                List<ChatMessage> messages = new List<ChatMessage>();
+
+                string retreiveMessagesQuery = @"
+                SELECT
+                    m.user_name AS sender_name,
+                    c.message_content,
+                    c.sent_time
+                FROM Chats c
+                JOIN Members m ON c.sender_id = m.member_id
+                WHERE
+                    (c.sender_id = @SenderID AND c.receiver_id = @ReceiverID) OR
+                    (c.sender_id = @ReceiverID AND c.receiver_id = @SenderID)
+                ORDER BY c.sent_time";
+
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        using (MySqlCommand command = new MySqlCommand(retreiveMessagesQuery, connection))
+                        {
+                            command.Parameters.AddWithValue("@SenderID", senderID);
+                            command.Parameters.AddWithValue("@ReceiverID", receiverID);
+
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    messages.Add(new ChatMessage
+                                    {
+                                        //SenderID = reader.GetInt32("SenderID"),
+                                        //ReceiverID = reader.GetInt32("ReceiverID"),
+                                        SenderName = reader.GetString("sender_name"),
+                                        MessageContent = reader.GetString("message_content"),
+                                        SentTime = reader.GetDateTime("sent_time")
+
+                                    });
+                                }
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message} ");
+                }
+
+                return messages;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return new List<ChatMessage>();
+            }
+        }
+        #endregion
+
+        #region Admin
+        // Method to insert Admin Record
+        public void InsertAdmin(
+            string fullName,
+            string userName,
+            string password)
+        {
+            string insertAdminQuery = @"
+            INSERT INTO Admin (full_name, user_name, password)
+            VALUES (@FullName, @UserName, @Password);";
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand insertAdminCommand = new MySqlCommand(insertAdminQuery, connection))
+                    {
+                        insertAdminCommand.Parameters.AddWithValue("@FullName", fullName);
+                        insertAdminCommand.Parameters.AddWithValue("@UserName", userName);
+                        insertAdminCommand.Parameters.AddWithValue("@Password", password);
+
+                        insertAdminCommand.ExecuteNonQuery();
+
+                    }
+                }
+                Console.WriteLine("Admin added successfully");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Connection Error: {ex.Message}");
+            }
+        }
+
+
+        #endregion
+
+        #region Events
+        public void MakeEvents(
+            int adminID,
+            string title,
+            string description,
+            DateTime eventDate,
+            DateTime startTime, 
+            DateTime endTime, 
+            string location)
+        {
+            string insertEventsQuery = @"
+            INSERT INTO Events (created_by, title, description, event_date, start_time, end_time, location)
+            VALUES (@CreatedBy, @Title, @Description, @EventDate, @StartTime, @EndTime, @Location);";
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand insertEventsCommand = new MySqlCommand(insertEventsQuery, connection))
+                    {
+                        insertEventsCommand.Parameters.AddWithValue("@CreatedBy", adminID);
+                        insertEventsCommand.Parameters.AddWithValue("@Title", title);
+                        insertEventsCommand.Parameters.AddWithValue("@Description", description);
+                        insertEventsCommand.Parameters.AddWithValue("@EventDate", eventDate);
+                        insertEventsCommand.Parameters.AddWithValue("@StartTime", startTime);
+                        insertEventsCommand.Parameters.AddWithValue("@EndTime", endTime);
+                        insertEventsCommand.Parameters.AddWithValue("@Location", location);
+
+                        insertEventsCommand.ExecuteNonQuery();
+
+                    }
+                }
+                Console.WriteLine("Events Table created successfully");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error creating Event: {ex.Message}");
+            }
+        }
+
+        public DataTable GetAllEvents()
+        {
+            string getAllEventQuery = @"
+            SELECT event_id, title, description, event_date, start_time, end_time, location FROM Events";
+
+            DataTable eventsTable = new DataTable();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString)) 
+                {
+                    connection.Open();
+
+                    using (MySqlCommand getEventsCommand = new MySqlCommand(getAllEventQuery, connection))
+                    {
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(getEventsCommand);
+                        adapter.Fill(eventsTable);   // Fill the DataTable
+                    }
+                }
+
+                return eventsTable;
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving event table: {ex.Message}");
+                return null;
+            }
+
+        }
+
+        public DataTable GetFilteredEvents(DateTime startDate, DateTime endDate)
+        {
+            string getFilteredEventQuery = @"
+            SELECT event_id, title, description, event_date, start_time, end_time, location
+            FROM Events
+            WHERE event_date BETWEEN @StartDate AND @EndDate";
+
+            DataTable eventsTable = new DataTable();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand getEventsCommand = new MySqlCommand(getFilteredEventQuery, connection))
+                    {
+                        getEventsCommand.Parameters.AddWithValue("@StartDate", startDate);
+                        getEventsCommand.Parameters.AddWithValue("@EndDate", endDate);
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(getEventsCommand);
+                        adapter.Fill(eventsTable);
+
+                    }
+                }
+
+                return eventsTable;
+                
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error retrieving event table: {ex.Message}");
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region Posts
+        public DataTable RetreivePosts()
+        {
+            try
+            {
+                string retreivePostsQuery = @"
+                SELECT m.username, p.content, p.created_at
+                FROM Posts p
+                INNER JOIN Members m ON p.member_id = m.member_id
+                ORDER BY p.created_at DESC";
+
+                DataTable postsTable = new DataTable();
+
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand retreivePostsCommand = new MySqlCommand(retreivePostsQuery, connection))
+                    {
+                        using(MySqlDataAdapter adapter = new MySqlDataAdapter(retreivePostsCommand))
+                        {
+                            adapter.Fill(postsTable);
+                        }
+                    }
+                }
+                return postsTable;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error retrieving all posts: {ex.Message}");
+                return null;
+
+            }
+        }
+
+        public DataTable RetreiveNewPosts(DateTime lastFetchedTime)
+        {
+            try
+            {
+                string retreieveNewPostsQuery = @"
+                SELECT m.user_name, p.content, p.created_at
+                FROM Posts p
+                INNER JOIN Members m ON p.member_id = m.member_id
+                WHERE p.created_at > @LastFetched
+                ORDER BY p.created_at";
+
+                DataTable postsTable = new DataTable();
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand retreieveNewPostsCommand = new MySqlCommand(retreieveNewPostsQuery, connection))
+                    {
+                        retreieveNewPostsCommand.Parameters.AddWithValue("@LastFetched", lastFetchedTime);
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(retreieveNewPostsCommand))
+                        {
+                            adapter.Fill(postsTable);
+                        }
+                    }
+
+                }
+                    return postsTable;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error retrieving new posts: {ex.Message}");
+                return null;
+            }
+
+
+        }
+
+        public void InsertPost(int memberID, string content)
+        {
+            try
+            {
+                string insertPostQuery = @"
+                INSERT INTO Posts (member_id, content, created_at)
+                VALUES (@MemberID, @Content, NOW())";
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using(MySqlCommand insertPostCommand = new MySqlCommand(insertPostQuery, connection))
+                    {
+                        insertPostCommand.Parameters.AddWithValue("@MemberID", memberID);
+                        insertPostCommand.Parameters.AddWithValue("@Content", content);
+
+                        insertPostCommand.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error inserting new posts: {ex.Message}");
+            }
+
+        }
+
         #endregion
     }
 }

@@ -18,7 +18,7 @@ namespace TCCRM
         private MemberPosts memberPosts;
         private CreateNewPlans createNewPlans;
         private ViewProjectPlan viewProjectPlan;
-        private LoggedInMember loggedInMember;
+        private LoggedInUser loggedInMember;
 
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool sidebarExpand;
@@ -26,7 +26,7 @@ namespace TCCRM
         bool connectionCollapse;
         bool profileExpand;
 
-        public MemberHome(LoggedInMember member)
+        public MemberHome(LoggedInUser member)
         {
             InitializeComponent();
             loggedInMember = member;
@@ -46,7 +46,7 @@ namespace TCCRM
             };
 
             // Initialize MemberChat
-            memberChat = new MemberChat
+            memberChat = new MemberChat(loggedInMember)
             {
                 Dock = DockStyle.Fill,
                 Visible = false
@@ -172,7 +172,6 @@ namespace TCCRM
             viewProjectPlan.Visible = true;
             viewProjectPlan.BringToFront();
         }
-
 
         public void ReturnHome()
         {

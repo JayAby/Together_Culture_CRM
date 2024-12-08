@@ -28,31 +28,44 @@ namespace TCCRM
             // Insert Member
             try
             {
-                string firstName = "Jason";
-                string lastName = "Doe";
-                string userName = "Jd123";
-                string email = "jasondoe.test@co.uk";
-                string password = "Pass123";
+                string firstName = "Silvia  ";
+                string lastName = "Long";
+                string userName = "Sl234";
+                string email = "Silvong.test@co.uk";
+                string password = "Pass13";
                 string policyTitle = "Together Culture Cambridge Policy";
                 string policyContent = "The impact we aim to have by 2033 is to tangibly create a more inclusive and ecological economy in Cambridge. " +
                     " \r\n\r\nThree outcomes (the circles) indicate our impact and shape our plan. " +
                     "The arrows in between represent the products and services that we’re iteratively co-creating with our members to deliver those outcomes. ";
 
-                //dbOps.InsertMemberWithPolicy(
-                //firstName,
-                //    lastName,
-                //    userName,
-                //    email,
-                //    password,
-                //    policyTitle,
-                //    policyContent
-                //);
+                dbOps.InsertMemberWithPolicy(
+                firstName,
+                    lastName,
+                    userName,
+                    email,
+                    password,
+                    policyTitle,
+                    policyContent
+                );
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error inserting member: {ex.Message}");
             }
 
+            // Insert Admin
+            try
+            {
+                string fullName = "John Dufus";
+                string userName = "Jfuss23";
+                string password = "Pass123";
+
+                //dbOps.InsertAdmin( fullName, userName, password );
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error inserting member: {ex.Message}");
+            }
             // Start the application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

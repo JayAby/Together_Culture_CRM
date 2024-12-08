@@ -14,10 +14,13 @@ namespace TCCRM
     {
         private MemberHome memberHome;
         private MemberKeyPolicies memberKeyPolicies;
+        private LoggedInUser loggedInMember;
 
-        public MemberMainForm(LoggedInMember loggedInMember)
+        public MemberMainForm(LoggedInUser loggedInMember)
         {
             InitializeComponent();
+
+            this.loggedInMember = loggedInMember;
 
             // Initialize MemberHome as the default view
             memberHome = new MemberHome(loggedInMember)
@@ -44,5 +47,17 @@ namespace TCCRM
             memberKeyPolicies.Visible= false;
         }
 
+        private void MemberMainForm_Load(object sender, EventArgs e)
+        {
+            // Check if the logged in meber is set correctly
+            if (this.loggedInMember != null)
+            {
+                Console.WriteLine($"Logged in Member ID: {this.loggedInMember.MemberID}, Username: {this.loggedInMember.Username}");
+            }
+            else
+            {
+                Console.WriteLine("No logged in member");
+            }
+        }
     }
 }

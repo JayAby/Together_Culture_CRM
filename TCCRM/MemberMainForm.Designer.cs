@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(1262, 773);
             this.Name = "MemberMainForm";
             this.Text = "Together Culture";
+            this.Load += new System.EventHandler(this.MemberMainForm_Load);
             this.ResumeLayout(false);
 
         }

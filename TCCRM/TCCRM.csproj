@@ -125,6 +125,7 @@
     <Compile Include="AdminViewEvents.Designer.cs">
       <DependentUpon>AdminViewEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppContext.cs" />
     <Compile Include="ChatMessage.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="CreateCRMTables.cs" />
@@ -136,7 +137,7 @@
     </Compile>
     <Compile Include="DatabaseOperations.cs" />
     <Compile Include="KeyPolicy.cs" />
-    <Compile Include="LoggedInMember.cs" />
+    <Compile Include="LoggedInUser.cs" />
     <Compile Include="MemberChat.cs">
       <SubType>UserControl</SubType>
     </Compile>

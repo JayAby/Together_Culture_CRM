@@ -56,10 +56,10 @@
             // 
             // txtChatDisplay
             // 
-            this.txtChatDisplay.Location = new System.Drawing.Point(194, 275);
+            this.txtChatDisplay.Location = new System.Drawing.Point(144, 179);
             this.txtChatDisplay.Multiline = true;
             this.txtChatDisplay.Name = "txtChatDisplay";
-            this.txtChatDisplay.Size = new System.Drawing.Size(337, 44);
+            this.txtChatDisplay.Size = new System.Drawing.Size(387, 198);
             this.txtChatDisplay.TabIndex = 4;
             // 
             // cmbLoadMember

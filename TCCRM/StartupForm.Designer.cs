@@ -81,17 +81,18 @@
             this.adminContainer.MaximumSize = new System.Drawing.Size(600, 276);
             this.adminContainer.MinimumSize = new System.Drawing.Size(600, 103);
             this.adminContainer.Name = "adminContainer";
-            this.adminContainer.Size = new System.Drawing.Size(600, 103);
+            this.adminContainer.Size = new System.Drawing.Size(600, 276);
             this.adminContainer.TabIndex = 2;
             // 
             // btnAdminLogin
             // 
             this.btnAdminLogin.Location = new System.Drawing.Point(252, 220);
             this.btnAdminLogin.Name = "btnAdminLogin";
-            this.btnAdminLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnAdminLogin.Size = new System.Drawing.Size(75, 41);
             this.btnAdminLogin.TabIndex = 5;
             this.btnAdminLogin.Text = "Login";
             this.btnAdminLogin.UseVisualStyleBackColor = true;
+            this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click);
             // 
             // txtAdminPassword
             // 
@@ -137,14 +138,14 @@
             this.memberContainer.MaximumSize = new System.Drawing.Size(600, 276);
             this.memberContainer.MinimumSize = new System.Drawing.Size(600, 103);
             this.memberContainer.Name = "memberContainer";
-            this.memberContainer.Size = new System.Drawing.Size(600, 276);
+            this.memberContainer.Size = new System.Drawing.Size(600, 117);
             this.memberContainer.TabIndex = 5;
             // 
             // btnMemberLogin
             // 
-            this.btnMemberLogin.Location = new System.Drawing.Point(252, 229);
+            this.btnMemberLogin.Location = new System.Drawing.Point(252, 235);
             this.btnMemberLogin.Name = "btnMemberLogin";
-            this.btnMemberLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnMemberLogin.Size = new System.Drawing.Size(75, 38);
             this.btnMemberLogin.TabIndex = 6;
             this.btnMemberLogin.Text = "Login";
             this.btnMemberLogin.UseVisualStyleBackColor = true;

@@ -14,15 +14,18 @@ namespace TCCRM
     {
         private AdminMakeEvents makeEvents;
         private AdminViewEvents viewEvents;
+        private LoggedInUser loggedInAdmin;
 
         // Variables to manage the expand/collapse states of the sidebar and other containers
         bool eventsCollapse;
         bool sidebarExpand;
-        public AdminHome()
+        public AdminHome(LoggedInUser admin)
         {
             InitializeComponent();
 
-            makeEvents = new AdminMakeEvents() { 
+            loggedInAdmin = admin;
+
+            makeEvents = new AdminMakeEvents(loggedInAdmin) { 
                 Dock = DockStyle.Fill,
                 Visible = false
             };

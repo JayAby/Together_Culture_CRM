@@ -13,15 +13,19 @@ namespace TCCRM
     public partial class AdminMainForm : Form
     {
         private AdminHome adminHome;
-        public AdminMainForm()
+        private LoggedInUser loggedInAdmin;
+        public AdminMainForm(LoggedInUser admin)
         {
             InitializeComponent();
+            loggedInAdmin = admin;
 
             // Initialize AdminHome as the default View
-            adminHome = new AdminHome()
+            adminHome = new AdminHome(loggedInAdmin)
             {
                 Dock = DockStyle.Fill
             };
+            // Pass logged in admin to controls
+            AdminMakeEvents makeEvents = new AdminMakeEvents(loggedInAdmin);
 
             // Add adminhome to mainform
             this.Controls.Add(adminHome);

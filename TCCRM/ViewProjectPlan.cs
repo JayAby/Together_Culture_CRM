@@ -10,14 +10,14 @@ namespace TCCRM
         private List<ProjectPlan> projectPlans;
         private DatabaseOperations dbOps;
         private MemberHome parentHome;
-        private LoggedInMember loggedInMember; // Store the logged in member
+        private LoggedInUser loggedInMember; // Store the logged in member
 
         public void SetParentHome(MemberHome home)
         {
             parentHome = home;
         }
 
-        public ViewProjectPlan(LoggedInMember member)
+        public ViewProjectPlan(LoggedInUser member)
         {
             InitializeComponent();
 

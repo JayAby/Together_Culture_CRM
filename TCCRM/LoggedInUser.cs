@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace TCCRM
 {
-    public class LoggedInMember
+    public class LoggedInUser
     {
         public int MemberID { get; set; }
+
+        public int AdminID {  get; set; }
         public string Username { get; set; }
+
     }
+
 }

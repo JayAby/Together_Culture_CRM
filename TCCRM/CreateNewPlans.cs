@@ -15,7 +15,7 @@ namespace TCCRM
     {
         private MemberHome parentHome;
         private ViewProjectPlan viewProjectPlan;
-        private LoggedInMember loggedInMember;
+        private LoggedInUser loggedInMember;
 
         // Method to set a reference of view project plan
         public void SetViewProjectPlan(ViewProjectPlan view)
@@ -27,8 +27,7 @@ namespace TCCRM
         {
             parentHome = home;
         }
-        public CreateNewPlans(LoggedInMember member
-            )
+        public CreateNewPlans(LoggedInUser member)
         {
             InitializeComponent();
 

@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,15 +9,16 @@ namespace TCCRM
     {
         private MemberHome parentHome;
         private DatabaseOperations dbOps;
-        LoggedInMember LoggedInMember = new LoggedInMember();
         private int currentMemberID;
- 
+        private LoggedInUser LoggedInMember;
+
+
         public void SetParentHome(MemberHome home)
         {
             parentHome = home;
         }
 
-        public MemberChat()
+        public MemberChat(LoggedInUser loggedInMember)
         {
             InitializeComponent();
 
@@ -34,10 +30,14 @@ namespace TCCRM
                 password: ""
             );
 
+            // Initialize with the logged in member
+            LoggedInMember = loggedInMember;
+
             // Timer to poll messages
             messageTimer.Tick += messageTimer_Tick;
             messageTimer.Start();
 
+            Console.WriteLine($"LoggedInMember: {LoggedInMember?.MemberID ?? 0}");
 
             LoadMembers();
         }
@@ -47,93 +47,138 @@ namespace TCCRM
         {
             try
             {
-                // Get Member_ID
-                int memberID = LoggedInMember.MemberID;
+                int memberID = LoggedInMember?.MemberID ?? 0;
 
-                // Clear previoous items
+                if (memberID <= 0)
+                {
+                    MessageBox.Show("Invalid Logged in member");
+                    return;
+                }
+
                 cmbLoadMember.Items.Clear();
 
-                // Fetch all members excluding user from the db
                 var members = dbOps.GetAllMembers(memberID);
+
+                if (members == null || members.Count == 0)
+                {
+                    MessageBox.Show("No members found.");
+                    return;
+                }
+
                 foreach (var member in members)
                 {
-                    // Add members to the combo-box
-                    cmbLoadMember.Items.Add(new ComboBoxItem
+                    if (member.MemberID != memberID)
                     {
-                        Value = member.MemberID,
-                        Text = member.Username
-                    });
+                        cmbLoadMember.Items.Add(new ComboBoxItem
+                        {
+                            Value = member.MemberID,
+                            Text = member.Username
+                        });
+                    }
                 }
 
-                // Select the first member by default
-                if (cmbLoadMember.Items.Count > 0) 
-                {
-                    cmbLoadMember.SelectedIndex = 0;
-                }
-
-
+                if (cmbLoadMember.Items.Count > 0)
+                    cmbLoadMember.SelectedIndex = 0; // Select first member by default
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error Loading Members: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void messageTimer_Tick(object sender, EventArgs e)
+        private async void messageTimer_Tick(object sender, EventArgs e)
         {
             if (currentMemberID > 0)
             {
-                LoadMessages(currentMemberID);
+                await LoadMessagesAsync(currentMemberID);
             }
         }
 
-
-
-        // Method to Load the messages
-        public void LoadMessages(int targetMemberID)
+        // Asynchronous method to load the messages
+        public async Task LoadMessagesAsync(int targetMemberID)
         {
-            int memberID = LoggedInMember.MemberID;
-
-            // Fetch chat messages from the db
-            var messages = dbOps.GetMessages(memberID, targetMemberID);
-
-            // Display messages in the chat text box
-            txtChatDisplay.Clear();
-            foreach (var message in messages)
+            if (LoggedInMember.MemberID == 0)
             {
-                string sender = message.SenderID == memberID ? "You" : message.SenderName;
-                txtChatDisplay.AppendText($"[{message.SentTime:yyyy-MM-dd HH:mm}] {sender}: {message.MessageContent}\r\n");
+                MessageBox.Show("Invalid Logged in member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            try
+            {
+                var messages = await dbOps.GetMessagesAsync(LoggedInMember.MemberID, targetMemberID);
+                txtChatDisplay.Clear();
+
+                foreach (var message in messages)
+                {
+                    string sender = message.SenderID == LoggedInMember.MemberID ? "You" : message.SenderName;
+                    txtChatDisplay.AppendText($"[{message.SentTime:yyyy-MM-dd HH:mm}] {sender}: {message.MessageContent}\r\n");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading messages: {ex.Message}");
             }
         }
 
         private void cmbLoadMember_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbLoadMember.SelectedItem is ComboBoxItem selectedMember)
+            if (cmbLoadMember.SelectedItem is ComboBoxItem selectedItem)
             {
-                currentMemberID = selectedMember.Value;
-                LoadMessages(currentMemberID);
+                currentMemberID = selectedItem.Value;
+                Console.WriteLine($"Selected Member for Chat: {selectedItem.Text} (ID: {currentMemberID})");
             }
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
+        private async void btnSend_Click(object sender, EventArgs e)
         {
             string messageContent = txtMessage.Text.Trim();
+
+            // Ensure a member is selected and message is not empty
             if (string.IsNullOrEmpty(messageContent) || currentMemberID == 0)
             {
-                MessageBox.Show("Please select a member and enter a message");
+                MessageBox.Show("Please select a member and enter a message.");
+                return;
+            }
+
+            // Check if the selected member is not the logged-in member
+            if (currentMemberID == LoggedInMember.MemberID)
+            {
+                MessageBox.Show("You cannot send a message to yourself.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             int senderID = LoggedInMember.MemberID;
 
-            // Save messages to db
-            dbOps.SendMessage(senderID, currentMemberID, messageContent);
+            try
+            {
+                // Save the message to the database asynchronously
+                bool success = await dbOps.SendMessageAsync(senderID, currentMemberID, messageContent);
 
-            txtMessage.Clear();
-            LoadMessages(currentMemberID );
+                if (success)
+                {
+                    // Clear the message input field
+                    txtMessage.Clear();
 
+                    // Optionally reload messages for the selected member
+                    await LoadMessagesAsync(currentMemberID);
+
+                    // Provide success feedback to the user
+                    MessageBox.Show("Message sent successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to send message. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during the message sending process
+                MessageBox.Show($"Error sending message: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
+
+
     }
 }

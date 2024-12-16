@@ -18,6 +18,7 @@ namespace TCCRM
         private DatabaseOperations dbOps;
         private LoggedInUser LoggedInMember;
         private int currentMemberID;
+        private DateTime lastFetchedTime = DateTime.MinValue;
 
         public void SetParentHome(MemberHome home)
         {
@@ -49,13 +50,22 @@ namespace TCCRM
 
         private void btnMakePost_Click(object sender, EventArgs e)
         {
+            string postContent = txtPosts.Text;
+
+            if (string.IsNullOrWhiteSpace(postContent))
+            {
+                MessageBox.Show("Blank Posts not allowed!");
+                return;
+            }
+
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-                    MessageBox.Show("Success", "Connected");
-                }
+                dbOps.InsertPost(currentMemberID, postContent);
+                txtPosts.Clear();
+                MessageBox.Show("Posts Added Successfully");
+
+                // Load
+                LoadPosts();
             }
             catch (Exception ex) {
                 MessageBox.Show($"Error: {ex.Message}");
@@ -118,8 +128,45 @@ namespace TCCRM
 
         private void AddStyledPostToFlowLayout(string username, string content, DateTime createdAt)
         {
-            // Clone the template panel
-            Panel newPost = (Panel)postTemplate.Clone();
+            Panel postPanel = new Panel
+            {
+                Width = flowLayoutPosts.ClientSize.Width - 20,
+                Height = 100,
+                Margin = new Padding(10),
+                BorderStyle = BorderStyle.FixedSingle,
+            };
+
+            Label lbUsername = new Label
+            {
+                Text = username,
+                Font = new Font("Arial", 10, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                ForeColor = Color.Blue,
+            };
+
+            Label lbDate = new Label
+            {
+                Text = createdAt.ToString("g"),
+                Font = new Font("Arial", 8),
+                Dock = DockStyle.Bottom,
+                ForeColor = Color.Gray,
+            };
+
+            TextBox txtContent = new TextBox
+            {
+                Text = content,
+                Multiline = true,
+                ReadOnly = true,
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                BorderStyle = BorderStyle.None
+            };
+
+            postPanel.Controls.Add(txtContent);
+            postPanel.Controls.Add(lbUsername);
+            postPanel.Controls.Add(lbDate);
+
+            flowLayoutPosts.Controls.Add(postPanel);
 
         }
     }

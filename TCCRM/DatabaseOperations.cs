@@ -5,7 +5,9 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using Google.Protobuf.Collections;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 
 namespace TCCRM
 {
@@ -557,22 +559,21 @@ namespace TCCRM
         {
             try
             {
-                string retreivePostsQuery = @"
-                SELECT m.username, p.content, p.created_at
-                FROM Posts p
-                INNER JOIN Members m ON p.member_id = m.member_id
-                ORDER BY p.created_at DESC";
+                string retrievePostsQuery = @"
+                    SELECT m.user_name, p.content, p.created_at
+                    FROM Posts p
+                    INNER JOIN Members m ON p.member_id = m.member_id
+                    ORDER BY p.created_at DESC";
 
                 DataTable postsTable = new DataTable();
-
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    using (MySqlCommand retreivePostsCommand = new MySqlCommand(retreivePostsQuery, connection))
+                    using (MySqlCommand retrievePostsCommand = new MySqlCommand(retrievePostsQuery, connection))
                     {
-                        using(MySqlDataAdapter adapter = new MySqlDataAdapter(retreivePostsCommand))
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(retrievePostsCommand))
                         {
                             adapter.Fill(postsTable);
                         }
@@ -580,24 +581,25 @@ namespace TCCRM
                 }
                 return postsTable;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
+                // Log error (consider a logging library like NLog or Serilog)
                 Console.WriteLine($"Error retrieving all posts: {ex.Message}");
                 return null;
-
             }
         }
+
 
         public DataTable RetreiveNewPosts(DateTime lastFetchedTime)
         {
             try
             {
-                string retreieveNewPostsQuery = @"
-                SELECT m.user_name, p.content, p.created_at
-                FROM Posts p
-                INNER JOIN Members m ON p.member_id = m.member_id
-                WHERE p.created_at > @LastFetched
-                ORDER BY p.created_at";
+                string retrieveNewPostsQuery = @"
+                    SELECT m.user_name, p.content, p.created_at
+                    FROM Posts p
+                    INNER JOIN Members m ON p.member_id = m.member_id
+                    WHERE p.created_at > @LastFetched
+                    ORDER BY p.created_at";
 
                 DataTable postsTable = new DataTable();
 
@@ -605,56 +607,55 @@ namespace TCCRM
                 {
                     connection.Open();
 
-                    using (MySqlCommand retreieveNewPostsCommand = new MySqlCommand(retreieveNewPostsQuery, connection))
+                    using (MySqlCommand retrieveNewPostsCommand = new MySqlCommand(retrieveNewPostsQuery, connection))
                     {
-                        retreieveNewPostsCommand.Parameters.AddWithValue("@LastFetched", lastFetchedTime);
+                        retrieveNewPostsCommand.Parameters.AddWithValue("@LastFetched", lastFetchedTime);
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(retreieveNewPostsCommand))
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(retrieveNewPostsCommand))
                         {
                             adapter.Fill(postsTable);
                         }
                     }
-
                 }
-                    return postsTable;
+                return postsTable;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
+                // Log error
                 Console.WriteLine($"Error retrieving new posts: {ex.Message}");
                 return null;
             }
-
-
         }
+
 
         public void InsertPost(int memberID, string content)
         {
             try
             {
                 string insertPostQuery = @"
-                INSERT INTO Posts (member_id, content, created_at)
-                VALUES (@MemberID, @Content, NOW())";
+                    INSERT INTO Posts (member_id, content, created_at)
+                    VALUES (@MemberID, @Content, NOW())";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    using(MySqlCommand insertPostCommand = new MySqlCommand(insertPostQuery, connection))
+                    using (MySqlCommand insertPostCommand = new MySqlCommand(insertPostQuery, connection))
                     {
                         insertPostCommand.Parameters.AddWithValue("@MemberID", memberID);
                         insertPostCommand.Parameters.AddWithValue("@Content", content);
 
                         insertPostCommand.ExecuteNonQuery();
-
                     }
                 }
             }
             catch (Exception ex)
             {
+                // Log error
                 Console.WriteLine($"Error inserting new posts: {ex.Message}");
             }
-
         }
+
 
         #endregion
     }

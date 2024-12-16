@@ -53,7 +53,7 @@ namespace TCCRM
             };
 
             // Initialize MemberPosts
-            memberPosts = new MemberPosts
+            memberPosts = new MemberPosts(loggedInMember)
             {
                 Dock = DockStyle.Fill,
                 Visible = false
